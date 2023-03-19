@@ -4,6 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+
+  <style>
+    nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #333;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav li.dropdown:hover > ul {
+  display: block;
+}
+
+nav li.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+}
+
+nav li.dropdown ul li {
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li.dropdown ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav li.dropdown ul li:hover {
+  background-color: #f6f6f6;
+}
+
+  </style>
 </head>
 <body class="bg-color_Geral mx-32 my-16">
 
@@ -13,7 +64,53 @@
     </div>
     <div class=" flex items-center justify-center">
       <ul class="flex items-center space-x-8">
-        <li><a href="#">Products</a></li>
+        <li>
+            <div class="relative">
+                <button id="openDropdown" class="flex items-center">
+                    <h6>Products</h6> 
+
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                  </svg>
+
+                </button>
+                <div class=" mt-2 pt-6 absolute w-96 drop_Down hidden bg-white py-1 rounded-md">
+                    <button id="tagP" class="block w-full px-5 py-1 hover:bg-color_Fundos mb-4">
+                        <div class="pr-12">
+                          <div class="flex">
+                            <a href="#"><img src="../Assets/Spense_Icon.svg" alt=""></a>
+                            <h1 class="ml-2 font-bold">Spense</h1>
+                          </div>
+                          <div>
+                            <p class="ml-8 mr-2 text-xs w-full text-justify">Spense is a landing page for writers. Great for practicing absolute position and flex layouts.</p>
+                          </div>
+                        </div>
+                    </button>
+                    <button id="tagP" class="block w-full px-5 py-1 hover:bg-color_Fundos mb-4">
+                        <div class="pr-12">
+                          <div class="flex">
+                            <a href="#"><img src="../Assets/Fiber_Icon.svg" alt=""></a>
+                            <h1 class="ml-2 font-bold">Fiber Landing Page</h1>
+                          </div>
+                          <div>
+                            <p class="ml-8 mr-2 text-xs w-full text-justify">An online portfolio generator. Great to pactice flex/grid layouts,and abolute positioning.</p>
+                          </div>
+                        </div>
+                    </button>
+                    <button id="tagP" class="block w-full px-5 py-1 hover:bg-color_Fundos mb-4">
+                        <div class="pr-12">
+                          <div class="flex">
+                            <a href="#"><img src="../Assets/Gradie_Icon.svg" alt=""></a>
+                            <h1 class="ml-2 font-bold">Gradie Sign Up Page</h1>
+                          </div>
+                          <div>
+                            <p class="ml-8 mr-2 text-xs w-full text-justify">Gradie is a simple up page,great to pactice centering layouts.</p>
+                          </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </li>
         <li><a href="#">Challenges</a></li>
         <li><a href="#">Resources</a></li>
         <li><a href="#">Other Links</a></li>
@@ -63,5 +160,26 @@
   </footer>
   
   </h1>
+
+  <div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li class="dropdown">
+          <a href="#">Serviços</a>
+          <ul>
+            <li><a href="#">Serviço 1</a></li>
+            <li><a href="#">Serviço 2</a></li>
+            <li><a href="#">Serviço 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    
+  </div>
+
+  <script src="./main.js"></script>
 </body>
 </html>
